@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: teal;
+    counter-set: say;
+}
+input {
+    display: none;
+}
+label {
+    border: 1px solid white;
+    background-color: red;
+    color:white;
+    padding: 6px 6px 6px 6px;
+    margin: 0px 0px 0px 6px;
+}
+label:hover {
+    background-color: blue;
+    cursor: pointer;
+    transition: 0.8s;
+}
+input:checked + label {
+    background-color: white;
+    border: 1px solid red;
+    color: red;
+    counter-increment: say;
+}
+h3 {
+    margin: 10px 0px 0px 0px;
+}
+h3::after {
+    content: counter(say);
+}
+h1 {
+    margin: 0px 0px 10px 0px;
+}
